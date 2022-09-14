@@ -25,10 +25,13 @@ COPY package*.json ./
 COPY . .
 
 RUN rm -Rvf node_modules
+RUN rm -Rvf dist
+
 RUN rm -Rvf nginx
+RUN rm -Rvf frontend
 
-RUN npm install
+RUN yarn --pure-lockfile
 
-RUN npm run build
+RUN yarn build
 
 CMD [ "node", "dist/main.js" ]

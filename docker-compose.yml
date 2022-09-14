@@ -1,32 +1,32 @@
 version: "3.7"
 
 services:
-#  nginx:
-#    build: ./nginx
-#    depends_on:
-#      - backend
-#    ports:
-#      - '80:80'
-#  backend:
-#    container_name: sadiq_restaurant_backend
-#    restart: always
-#    build:
-#      context: .
-##      extra_hosts:
-##        - host.docker.internal:host-gateway
-#    environment:
-#      - APP_ENV=development
-#      - APP_PORT=9001
-#    volumes:
-#      - ./src:/var/www/sadiq_restaurant/src
-#      - ./test:/var/www/sadiq_restaurant/test
-#    working_dir: /var/www/sadiq_restaurant
-#    ports:
-#      - "9001:9001"
-#    links:
-#      - mysql
-#    depends_on:
-#      - mysql
+  nginx:
+    build: ./nginx
+    depends_on:
+      - backend
+    ports:
+      - '80:80'
+  backend:
+    container_name: sadiq_restaurant_backend
+    restart: always
+    build:
+      context: .
+#      extra_hosts:
+#        - host.docker.internal:host-gateway
+    environment:
+      - APP_ENV=development
+      - APP_PORT=9001
+    volumes:
+      - ./src:/var/www/sadiq_restaurant/src
+      - ./test:/var/www/sadiq_restaurant/test
+    working_dir: /var/www/sadiq_restaurant
+    ports:
+      - "9001:9001"
+    links:
+      - mysql
+    depends_on:
+      - mysql
   mysql:
     container_name: sadiq_restaurant_mysql
     restart: unless-stopped

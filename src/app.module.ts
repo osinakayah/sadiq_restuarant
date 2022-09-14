@@ -17,7 +17,7 @@ import { ConfigModule } from '@nestjs/config';
       host: 'mysql',
       // host: 'host.docker.internal',
       port: 3306,
-      username: 'root',
+      username: 'osinakayah',
       password: 'root',
       database: 'credit',
       entities: [Credit],

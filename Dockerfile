@@ -10,5 +10,6 @@ COPY .eslintrc.js nest-cli.json tsconfig.json tsconfig.build.json ./
 COPY .env.docker /var/www/sadiq_restaurant/.env
 
 
-CMD [ "yarn", "build" ]
+RUN yarn build
+
 CMD [ "yarn", "start:prod" ]

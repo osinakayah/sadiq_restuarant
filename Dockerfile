@@ -23,12 +23,12 @@ WORKDIR /var/www/sadiq_restaurant
 COPY package*.json ./
 
 COPY . .
-RUN ls
+
 RUN rm -Rvf node_modules
 RUN rm -Rvf nginx
-RUN ls
+
 RUN npm install
-RUN ls
+
 RUN npm run build
-RUN ls
+
 CMD [ "node", "dist/main.js" ]

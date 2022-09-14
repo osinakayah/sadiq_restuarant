@@ -14,7 +14,8 @@ import { ConfigModule } from '@nestjs/config';
     }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'mysql',
+      // host: 'mysql',
+      host: 'host.docker.internal',
       port: 3306,
       username: 'root',
       password: 'root',

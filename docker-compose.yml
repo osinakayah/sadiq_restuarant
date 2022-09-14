@@ -29,12 +29,12 @@ services:
       - mysql
   mysql:
     container_name: sadiq_restaurant_mysql
-    restart: always
+    restart: unless-stopped
     image: mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=root=root
-      - MYSQL_PASSWORD==root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
       - MYSQL_DATABASE=credit
     ports:
       - "3306:3306"

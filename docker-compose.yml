@@ -12,8 +12,8 @@ services:
     restart: always
     build:
       context: .
-#      extra_hosts:
-#        - host.docker.internal:host-gateway
+      extra_hosts:
+        - host.docker.internal:host-gateway
     environment:
       - APP_ENV=development
       - APP_PORT=9001
@@ -44,10 +44,10 @@ services:
 volumes:
   sadiq_restaurant_mysql_data:
 
-#networks:
-#  default:
-#    external:
-#      name: sadiq_restaurant
+networks:
+  default:
+    external:
+      name: sadiq_restaurant
 
 
 

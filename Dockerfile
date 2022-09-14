@@ -12,4 +12,4 @@ COPY .env.docker /var/www/sadiq_restaurant/.env
 
 RUN yarn build
 
-CMD [ "yarn", "start:dev" ]
+CMD [ "yarn", "start:prod" ]
